@@ -1,6 +1,7 @@
 package com.rest.api.controller;
 
 import com.rest.api.model.Comment;
+import com.rest.api.repository.PostRepository;
 import com.rest.api.service.CommentService;
 import com.rest.api.utils.request.CommentDTO;
 import com.rest.api.utils.response.CommentResponseDTO;
@@ -19,6 +20,7 @@ public class CommentController {
 
     @Autowired
     private CommentService commentService;
+
 
     @GetMapping({"/all", ""})
     private ResponseEntity<List<CommentResponseDTO>> getAllComment() {
